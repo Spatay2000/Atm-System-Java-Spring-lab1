@@ -7,5 +7,20 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <bean id="user" class="dl.iitu.kz.Account">
+        <property name="username" value="Aseke"/>
+        <property name="balance" value="0"/>
+        <property name="pincode" value="1111"/>
+
+    </bean>
+
+    <bean id="data" class="dl.iitu.kz.DataUser">
+        <property name="usersList">
+            <list>
+                <ref bean="user"/>
+
+            </list>
+        </property>
+    </bean>
 
 </beans>
